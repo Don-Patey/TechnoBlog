@@ -1,2 +1,39 @@
-<!-- home.handlebars -->
-<h1>Welcome to the Homepage!</h1>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tech Blog</title>
+</head>
+
+<body>
+  <header>
+    <h1>Welcome to the Tech Blog!</h1>
+  </header>
+
+  <section>
+    {{#if posts.length}}
+      <h2>Latest Blog Posts</h2>
+      <ul>
+        {{#each posts}}
+          <li>
+            <h3>{{this.title}}</h3>
+            <p>{{this.body}}</p>
+            <p>By {{this.User.username}} on {{this.createdAt}}</p>
+            <a href="/post/{{this.id}}">Read more</a>
+          </li>
+        {{/each}}
+      </ul>
+    {{else}}
+      <p>No blog posts available.</p>
+    {{/if}}
+  </section>
+
+  <footer>
+    <p>&copy; 2024 Tech Blog</p>
+  </footer>
+</body>
+
+</html>
