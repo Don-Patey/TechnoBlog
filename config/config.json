@@ -1,0 +1,20 @@
+{
+  "development": {
+     "username": "technoblog_user",
+     "password": "your_password",
+     "database": "technoblog_DB",
+     "host": "localhost",
+     "dialect": "mysql"
+  },
+  "test": {
+     "username": "your_test_database_user",
+     "password": "your_test_database_password",
+     "database": "your_test_database_name",
+     "host": "localhost",
+     "dialect": "mysql"
+  },
+  "production": {
+     "use_env_variable": "DATABASE_URL",
+     "dialect": "mysql"
+  }
+}
